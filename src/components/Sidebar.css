@@ -1,0 +1,78 @@
+/* Aplica "Poppins" a todo o site */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Estilo do botão de sair */
+.exit-button {
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 8px;
+}
+
+.exit-icon {
+    font-size: 25px;
+}
+
+/* Nome do usuário centralizado e verde */
+.username {
+    color: #07C158;
+    text-align: center;
+}
+
+/* Estilo dos botões */
+.sidebar-button {
+    height: 50px;
+    width: 100%;
+    background-color: #e2e6ea;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Seta alinhada à direita */
+.sidebar-button .arrow {
+    position: absolute;
+    /* Posiciona a seta absolutamente */
+    right: 10px;
+    /* Distância da direita */
+}
+
+/* Estilo do botão ativo */
+.active-button {
+    background-color: #07C158;
+    color: white;
+}
+
+/* Centraliza a imagem do perfil */
+.profile-pic {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
