@@ -1,0 +1,45 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.agenda{
+    color: #07C158;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.btnCad{
+    background-color: #07C158 !important;
+    border-radius: 5px;
+    border-width: 0px;
+    color: #FAFAFA !important;
+    width: 25%;
+    height: 40px;
+}
+
+.th {
+    text-align: center;
+    font-size: 16px;
+    background-color: #FAFAFA !important;
+    color: #000000;
+}
+
+.sub {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.session-cell {
+    background-color: #30D0CA !important;
+    color: #FAFAFA !important;
+}
+
+.empty-cell {
+    background-color: #FAFAFA !important;
+    color: #000000 !important;
+}
+
+.tb{
+    border-radius: 10px;
+    border: 1px solid #B3B5B6;
+}
