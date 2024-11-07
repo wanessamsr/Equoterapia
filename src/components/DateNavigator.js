@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './DateNavigator.css'
 
 function DateNavigator({ onDateChange }) {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -18,11 +19,11 @@ function DateNavigator({ onDateChange }) {
 
     return (
         <div className="d-flex align-items-center justify-content-center my-3">
-            <button className="btn btn-secondary" onClick={() => changeDate(-1)}>
+            <button className="btn btnN" onClick={() => changeDate(-1)}>
                 <FaChevronLeft />
             </button>
             <span className="mx-3 text-dark">{formatDate(currentDate)}</span>
-            <button className="btn btn-secondary" onClick={() => changeDate(1)}>
+            <button className="btn btnN" onClick={() => changeDate(1)}>
                 <FaChevronRight />
             </button>
         </div>

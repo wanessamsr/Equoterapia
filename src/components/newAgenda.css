@@ -1,0 +1,28 @@
+.agendamento{
+    color: #07C158;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.btnC{
+    background-color: #032437 !important;
+    border-radius: 5px;
+    border-width: 0px;
+    color: #FAFAFA !important;
+    width: 15%;
+    height: 40px;
+}
+
+.btnA{
+    background-color: #07C158 !important;
+    border-radius: 5px;
+    border-width: 0px;
+    color: #FAFAFA !important;
+    width: 25%;
+    height: 40px;
+}
+
+.form{
+    color: #193238;
+    font-weight: 500;
+}
