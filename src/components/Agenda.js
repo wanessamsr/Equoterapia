@@ -53,7 +53,7 @@ function Agenda() {
                 <div>
                     <DateNavigator onDateChange={handleDateChange} />
                 </div>
-                <Link to="/new-agenda" className='btnCad btn' role="button" aria-pressed="true">Novo agendamento</Link>
+                <Link to="/novo-agendamento" className='btnCad btn' role="button" aria-pressed="true">Novo agendamento</Link>
             </div>
             <table className="table table-bordered rounded tb">
                 <thead>

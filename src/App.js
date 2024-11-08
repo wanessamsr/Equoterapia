@@ -28,7 +28,7 @@ function App() {
             }
           />
           <Route
-            path="/new-agenda"
+            path="/novo-agendamento"
             element={
               <div className="row">
                 <div className="col-12 col-md-3">
