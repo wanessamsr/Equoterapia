@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RxExit } from "react-icons/rx";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
-
 
 const Sidebar = () => {
   const [activeButton, setActiveButton] = useState(null);
@@ -12,10 +12,10 @@ const Sidebar = () => {
 
   return (
     <div className="d-flex flex-column sidebar p-3">
-      <button className="btn exit-button d-flex align-items-center">
+      <Link to="/login" className="btn exit-button d-flex align-items-center">
         <RxExit className="exit-icon me-1 icon-large" />
         <span>Sair</span>
-      </button>
+      </Link>
 
       <div className="profile-pic my-4">
         <img
