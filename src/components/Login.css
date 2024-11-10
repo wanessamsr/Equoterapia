@@ -21,6 +21,26 @@
     border: 1px solid rgb(184, 181, 181);
 }
 
+#user {
+    border: 1px solid rgb(184, 181, 181);
+}
+
+#code {
+    border: 1px solid rgb(184, 181, 181);
+}
+
+#texto {
+    color: gray;
+}
+
+#newPassword {
+    border: 1px solid rgb(184, 181, 181);
+}
+
+#confirmPassword {
+    border: 1px solid rgb(184, 181, 181);
+}
+
 .login-form h2 {
     color: black;
     font-weight: bold;

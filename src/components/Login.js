@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import logo from './imgs/icone.png';
+import logo from "./imgs/icone.png";
 import "./Login.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
 
+  const handleLogin = (event) => {
+    event.preventDefault();
+    navigate("/");
+  };
+
   return (
     <div className="login-container d-flex">
       <div className="login-form col-5 d-flex flex-column align-items-center justify-content-center">
-        <img
-          src={logo}
-          alt="Logo"
-          className="logo mb-4"
-        />
+        <img src={logo} alt="Logo" className="logo mb-4" />
         <h2 className="font-weight-bold">Acesse sua Conta</h2>
-        <form className="w-75 mt-3">
+        <form onSubmit={handleLogin} className="w-75 mt-3">
           <div className="mb-3 text-start w-100">
             <label htmlFor="username" className="form-label">
               Usuário
@@ -46,7 +49,9 @@ const Login = () => {
             </span>
           </div>
           <div className="text-end mb-3">
-            <button className="btn btn-link">Esqueceu sua senha?</button>
+            <Link to="/esqueceu-senha" className="btn btn-link">
+              Esqueceu sua senha?
+            </Link>
           </div>
           <button type="submit" className="btn btn-primary w-100 rounded-pill">
             Entrar
