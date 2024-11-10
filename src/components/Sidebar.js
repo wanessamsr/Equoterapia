@@ -38,17 +38,17 @@ const Sidebar = () => {
       </button>
       <button
         className={`btn sidebar-button mb-4 fw-bold ${
-          activeButton === "sessions" ? "active-button" : "btn-light"
+          activeButton === "sessoes" ? "active-button" : "btn-light"
         }`}
-        onClick={() => handleButtonClick("sessions")}
+        onClick={() => handleButtonClick("sessoes")}
       >
         Próximas Sessões <span className="arrow">&gt;</span>
       </button>
       <button
         className={`btn sidebar-button mb-4 fw-bold ${
-          activeButton === "practitioners" ? "active-button" : "btn-light"
+          activeButton === "praticantes" ? "active-button" : "btn-light"
         }`}
-        onClick={() => handleButtonClick("practitioners")}
+        onClick={() => handleButtonClick("praticantes")}
       >
         Listar Praticantes <span className="arrow">&gt;</span>
       </button>
