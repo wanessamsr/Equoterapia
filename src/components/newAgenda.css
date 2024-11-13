@@ -1,28 +1,69 @@
-.agendamento{
+.agendamento {
     color: #07C158;
     font-weight: bold;
     font-size: 24px;
 }
 
-.btnC{
+.btnC,
+.btnA {
+    border-radius: 5px;
+    border-width: 0px;
+    color: #FAFAFA !important;
+    margin-top: 10px;
+    min-width: 120px;
+}
+
+.btnC {
     background-color: #032437 !important;
-    border-radius: 5px;
-    border-width: 0px;
-    color: #FAFAFA !important;
-    width: 15%;
-    height: 40px;
 }
 
-.btnA{
+.btnA {
     background-color: #07C158 !important;
-    border-radius: 5px;
-    border-width: 0px;
-    color: #FAFAFA !important;
-    width: 25%;
-    height: 40px;
 }
 
-.form{
+.form {
     color: #193238;
     font-weight: 500;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 576px) {
+
+    .btnC,
+    .btnA {
+        min-width: 100%;
+        /* Botões ocupando 100% da largura */
+    }
+
+    .btnSM {
+        justify-content: start;
+        /* Botões alinhados à esquerda se necessário */
+    }
+
+    /* Garantir que os campos do formulário se ajustem bem */
+    .form .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form select,
+    .form input {
+        font-size: 14px;
+        /* Garantir que os campos se expandam corretamente */
+    }
+
+    .agendamento {
+        font-size: 20px;
+        /* Reduz o título para se adaptar melhor */
+    }
+
+    /* Ajuste das colunas para telas pequenas */
+    .form .row {
+        display: flex;
+        flex-direction: column;
+        /* Coloca os campos um abaixo do outro */
+    }
 }

@@ -13,21 +13,21 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="container-fluid">
+      <div className="app-container">
         <Routes>
+          {/* Rotas sem Sidebar */}
           <Route path="/login" element={<Login />} />
           <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
           <Route path="/codigo-verificacao" element={<CodigoVerificacao />} />
           <Route path="/nova-senha" element={<NovaSenha />} />
-          {/* Rotas para as outras páginas */}
+          
+          {/* Rotas com Sidebar */}
           <Route
             path="/"
             element={
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <Sidebar />
-                </div>
-                <div className="col-12 col-md-9">
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
                   <Agenda />
                 </div>
               </div>
@@ -36,11 +36,9 @@ function App() {
           <Route
             path="/novo-agendamento"
             element={
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <Sidebar />
-                </div>
-                <div className="col-12 col-md-9">
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
                   <NewAgenda />
                 </div>
               </div>

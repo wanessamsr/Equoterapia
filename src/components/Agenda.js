@@ -42,19 +42,22 @@ function Agenda() {
     };
 
     return (
-        <div className="container my-4">
+        <div className="container my-5">
             <div className='agenda mb-2'>
                 Agenda
             </div>
-            <div className='mb-4 d-flex justify-content-between align-items-center'>
-                <div>
+            <div className='mb-4 d-flex flex-column flex-md-row justify-content-between align-items-center'>
+                <div className='mb-3 mb-md-0'>
                     <SearchBar />  
                 </div>
-                <div>
+                <div className='mb-3 mb-md-0'>
                     <DateNavigator onDateChange={handleDateChange} />
                 </div>
-                <Link to="/novo-agendamento" className='btnCad btn' role="button" aria-pressed="true">Novo agendamento</Link>
+                <Link to="/novo-agendamento" className='btnCad btn' role="button" aria-pressed="true">
+                    Novo agendamento
+                </Link>
             </div>
+
             <table className="table table-bordered rounded tb">
                 <thead>
                     <tr>

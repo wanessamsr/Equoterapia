@@ -6,6 +6,23 @@
     width: 350px;
     height: 100vh;
     background-color: #f8f9fa;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-toggle {
+    display: none;
+    /* Escondido por padrão */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    z-index: 1000;
+    color: #333;
 }
 
 .exit-button {
@@ -19,6 +36,7 @@
     align-items: center;
     padding: 5px;
     gap: 8px;
+    margin-top: 40px;
 }
 
 .exit-icon {
@@ -65,4 +83,25 @@
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        position: fixed;
+        /* Esconde a sidebar fora da tela */
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        /* Mostra a sidebar */
+    }
+
+    .sidebar-toggle {
+        display: block;
+        /* Mostra o botão de menu em telas pequenas */
+    }
 }
