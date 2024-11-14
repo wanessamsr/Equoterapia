@@ -56,6 +56,12 @@ const Login = () => {
           <button type="submit" className="btn btn-primary w-100 rounded-pill">
             Entrar
           </button>
+          {/* Link temporário, apenas para ter acesso às telas */}
+          <div className="text-center mt-3">
+            <Link to="/equitador/" className="btn btn-link">
+              Ir para telas do Equitador
+            </Link>
+          </div>
         </form>
       </div>
       <div className="login-image col-7"></div>

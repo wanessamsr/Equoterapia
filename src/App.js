@@ -9,6 +9,8 @@ import EsqueceuSenha from "./components/EsqueceuSenha";
 import CodigoVerificacao from "./components/Codigo";
 import NovaSenha from "./components/NovaSenha";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SidebarEquitador from "./components/equitador/SidebarEquitador.js";
+import ListarEquino from "./components/equitador/ListarEquino.js";
 
 function App() {
   return (
@@ -40,6 +42,29 @@ function App() {
                 <Sidebar />
                 <div className="content">
                   <NewAgenda />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/equitador/"
+            element={
+              <div className="row">
+                <div className="col-12 col-md-3">
+                  <SidebarEquitador />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/equitador/listar-equino"
+            element={
+              <div className="row">
+                <div className="col-12 col-md-3">
+                  <SidebarEquitador />
+                </div>
+                <div className="col-12 col-md-9">
+                  <ListarEquino />
                 </div>
               </div>
             }

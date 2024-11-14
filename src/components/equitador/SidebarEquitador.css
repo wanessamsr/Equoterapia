@@ -1,0 +1,17 @@
+.username-equitador {
+    color: #4E3B31;
+    text-align: center;
+}
+
+.active-button-equitador {
+    background-color: #4E3B31;
+    color: white;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
