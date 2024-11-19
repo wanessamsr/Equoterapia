@@ -1,0 +1,103 @@
+/* CadastroPraticante1.css */
+.cadastro-title {
+    color: #07C158;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.section-title {
+    color: #07C158;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.sub-title {
+    color: #193238;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cadastro-form {
+    color: #193238;
+}
+
+.input-field {
+    border: 1px solid #B3B5B6;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.foto-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #f8f9fa;
+    border: 2px dashed #B3B5B6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-photo {
+    font-size: 40px;
+    color: #B3B5B6;
+}
+
+.btn-cancelar {
+    background-color: #032437 !important;
+    border: none;
+    color: #FAFAFA !important;
+    padding: 8px 24px;
+    border-radius: 5px;
+    min-width: 120px;
+}
+
+.btn-avancar {
+    background-color: #07C158 !important;
+    border: none;
+    color: #FAFAFA !important;
+    padding: 8px 24px;
+    border-radius: 5px;
+    min-width: 120px;
+}
+
+.responsavel-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-title {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .foto-placeholder {
+        width: 100px;
+        height: 100px;
+        margin: 20px 0;
+    }
+
+    .btn-cancelar,
+    .btn-avancar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .responsavel-section {
+        padding: 15px;
+    }
+}

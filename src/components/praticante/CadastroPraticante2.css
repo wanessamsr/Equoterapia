@@ -1,0 +1,121 @@
+/* CadastroPraticante2.css */
+.cadastro-title {
+    color: #07C158;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.section-title {
+    color: #07C158;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cadastro-form {
+    color: #193238;
+}
+
+.input-field {
+    border: 1px solid #B3B5B6;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Estilização da tabela de cronograma */
+.schedule-table {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.schedule-table table {
+    margin-bottom: 0;
+}
+
+.schedule-table th {
+    background-color: #f8f9fa;
+    color: #193238;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.schedule-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+}
+
+/* Customização dos checkboxes */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #07C158;
+    border-color: #07C158;
+}
+
+/* Botões */
+.btn-voltar {
+    background-color: #032437 !important;
+    border: none;
+    color: #FAFAFA !important;
+    padding: 8px 24px;
+    border-radius: 5px;
+    min-width: 120px;
+}
+
+.btn-concluir {
+    background-color: #07C158 !important;
+    border: none;
+    color: #FAFAFA !important;
+    padding: 8px 24px;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-title {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .schedule-table {
+        overflow-x: auto;
+    }
+
+    .schedule-table table {
+        min-width: 600px;
+    }
+
+    .btn-voltar,
+    .btn-concluir {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
