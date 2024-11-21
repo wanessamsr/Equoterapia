@@ -13,6 +13,7 @@ import SidebarEquitador from "./components/equitador/SidebarEquitador.js";
 import ListarEquino from "./components/equitador/ListarEquino.js";
 import CadastroPraticante1 from "./components/praticante/CadastroPraticante1";
 import CadastroPraticante2 from "./components/praticante/CadastroPraticante2";
+import ProximasSessoes from "./components/praticante/ProximasSessoes";
 
 function App() {
   return (
@@ -89,6 +90,17 @@ function App() {
                 <Sidebar />
                 <div className="content">
                   <CadastroPraticante2 />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/proximas-sessoes"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <ProximasSessoes />
                 </div>
               </div>
             }

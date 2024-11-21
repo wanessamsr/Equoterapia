@@ -14,6 +14,9 @@ const Sidebar = () => {
     if (button === "agenda") {
       navigate("/");
     }
+    if (button === "sessoes") {
+      navigate("/proximas-sessoes"); 
+    }
   };
 
   const toggleSidebar = () => {
