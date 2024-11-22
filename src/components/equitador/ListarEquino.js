@@ -1,13 +1,76 @@
-import React from "react";
-import { Link   } from "react-router-dom";
-import "./ListarEquino.css";
+import React, { useState } from "react";
+import './ListarEquino.css'; 
+import SearchBar from "../SearchBar.js";
 
-const ListarEquino = () =>{
-    return (
-        <div className='mb-4 d-flex justify-content-between align-items-center'>
-    <Link to="/cadastrar-equino" className='btnCad-equino btn' role="button" aria-pressed="true">Cadastre um novo Equino</Link>
-</div>
-    );
-}
+const ListarEquino = () => {
+  const [equinosAtivos, setEquinosAtivos] = useState([
+    { id: 1, nome: "Alfa", idade: "6 Anos", dataCadastro: "5 Dez 2024 15:59 PM" },
+    { id: 2, nome: "Primavera", idade: "7 Anos", dataCadastro: "17 Nov 2024 7:30 AM" },
+    { id: 3, nome: "Canela", idade: "10 Anos", dataCadastro: "17 Jan 2024 9:00 AM" },
+    { id: 4, nome: "Flash", idade: "12 Anos", dataCadastro: "17 Set 2024 16:40 PM" },
+  ]);
+
+  const [equinosArquivados, setEquinosArquivados] = useState([
+    { id: 5, nome: "Thor", idade: "8 Anos", dataCadastro: "20 Mar 2023 10:00 AM" },
+    { id: 6, nome: "Relâmpago", idade: "9 Anos", dataCadastro: "22 Ago 2023 12:00 PM" },
+  ]);
+
+  const [exibirAtivos, setExibirAtivos] = useState(true);
+
+  return (
+    <div className="container">
+      <h1 className="page-title">Equinos Cadastrados</h1>
+      <SearchBar className="listar-equinos-searchbar" />
+      
+      <div className="button-group">
+        {/* Botões ajustados */}
+        <button
+          className={`button-filter me-2 ${
+            exibirAtivos ? "btn-active" : "btn-outline-secondary"
+          }`}
+          onClick={() => setExibirAtivos(true)}
+        >
+          Equinos Ativos
+        </button>
+        <button
+          className={`button-filter ${
+            !exibirAtivos ? "btn-active" : "btn-outline-secondary"
+          }`}
+          onClick={() => setExibirAtivos(false)}
+        >
+          Equinos Arquivados
+        </button>
+        <button className="button-add">Cadastre um novo Equino</button>
+      </div>
+
+      <hr className="divider" />
+
+      <div className="listar-equinos">
+        {(exibirAtivos ? equinosAtivos : equinosArquivados).map((equino) => (
+          <div key={equino.id} className="item-container d-flex align-items-center">
+            <img
+              src="https://img.freepik.com/fotos-gratis/bela-vista-de-um-magnifico-cavalo-branco-com-o-campo-verde_181624-14424.jpg?t=st=1732245856~exp=1732249456~hmac=04d8eb3ea75eb418bdfca534b6ad1dcdf726f0a8155d9011bac86f34e12f7aaa&w=740"
+              alt="Equino"
+              className="avatar me-3"
+            />
+            <div className="info">
+              <p className="text mb-0"><b>{equino.nome}</b></p>
+              <p className="text mb-0">Idade: {equino.idade}</p>
+              <p className="text mb-0">Data de cadastro: {equino.dataCadastro}</p>
+            </div>
+            <div className="status text-end me-3">
+              <span className={`status-text ${exibirAtivos ? "text-success" : "text-danger"}`}>
+                {exibirAtivos ? "Status: Ativo" : "Status: Arquivado"}
+              </span>
+            </div>
+            <button className="action-button">
+              {exibirAtivos ? "Arquivar Equino" : "Desarquivar Equino"}
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default ListarEquino;

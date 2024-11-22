@@ -10,7 +10,7 @@ import CodigoVerificacao from "./components/Codigo";
 import NovaSenha from "./components/NovaSenha";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SidebarEquitador from "./components/equitador/SidebarEquitador.js";
-import ListarEquino from "./components/equitador/ListarEquino.js";
+import ListarEquino from "./components/equitador/ListarEquino";
 import CadastroPraticante1 from "./components/praticante/CadastroPraticante1";
 import CadastroPraticante2 from "./components/praticante/CadastroPraticante2";
 import ProximasSessoes from "./components/praticante/ProximasSessoes";
