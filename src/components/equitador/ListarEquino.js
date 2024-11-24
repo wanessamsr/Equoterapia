@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './ListarEquino.css'; 
 import SearchBar from "../SearchBar.js";
+import { Link } from 'react-router-dom';
+
 
 const ListarEquino = () => {
   const [equinosAtivos, setEquinosAtivos] = useState([
@@ -40,7 +42,7 @@ const ListarEquino = () => {
         >
           Equinos Arquivados
         </button>
-        <button className="button-add">Cadastre um novo Equino</button>
+        <Link to="/cadastrar-equino" className="button-add btn">Cadastre um novo Equino</Link>
       </div>
 
       <hr className="divider" />
@@ -48,11 +50,13 @@ const ListarEquino = () => {
       <div className="listar-equinos">
         {(exibirAtivos ? equinosAtivos : equinosArquivados).map((equino) => (
           <div key={equino.id} className="item-container d-flex align-items-center">
+            <Link to="/dados-equino">
             <img
               src="https://img.freepik.com/fotos-gratis/bela-vista-de-um-magnifico-cavalo-branco-com-o-campo-verde_181624-14424.jpg?t=st=1732245856~exp=1732249456~hmac=04d8eb3ea75eb418bdfca534b6ad1dcdf726f0a8155d9011bac86f34e12f7aaa&w=740"
               alt="Equino"
               className="avatar me-3"
             />
+            </Link>
             <div className="info">
               <p className="text mb-0"><b>{equino.nome}</b></p>
               <p className="text mb-0">Idade: {equino.idade}</p>

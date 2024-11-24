@@ -14,6 +14,8 @@ import ListarEquino from "./components/equitador/ListarEquino";
 import CadastroPraticante1 from "./components/praticante/CadastroPraticante1";
 import CadastroPraticante2 from "./components/praticante/CadastroPraticante2";
 import ProximasSessoes from "./components/praticante/ProximasSessoes";
+import CadastrarEquino from "./components/equitador/CadastrarEquino.js";
+import DadosEquino from "./components/equitador/DadosEquino.js";
 
 function App() {
   return (
@@ -72,6 +74,31 @@ function App() {
               </div>
             }
           />
+
+<Route
+            path="/cadastrar-equino"
+            element={
+              <div className="app-content">
+                <SidebarEquitador />
+                <div className="content">
+                  <CadastrarEquino />
+                </div>
+              </div>
+            }
+          />
+
+          <Route
+            path="/dados-equino"
+            element={
+              <div className="app-content">
+                <SidebarEquitador />
+                <div className="content">
+                  <DadosEquino />
+                </div>
+              </div>
+            }
+          />
+          
           <Route
             path="/cadastro-praticante"
             element={

@@ -1,0 +1,31 @@
+.title-sec {
+    color: #032437;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title-div {
+    border-bottom: 2px solid #032437;
+    width: 150px;
+    text-align: center;
+    color: #032437;
+}
+.sub-title {
+    color: gray;
+    font-size: 14px;
+}
+
+.color-grey {
+    color: #032437;
+}
+
+.img {
+    height: 120px;
+    width: 120px;
+}
+
+
+.btnC {
+    background-color: #032437 !important;
+    font-size: 12px;
+}
