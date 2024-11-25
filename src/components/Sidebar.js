@@ -17,6 +17,9 @@ const Sidebar = () => {
     if (button === "sessoes") {
       navigate("/proximas-sessoes"); 
     }
+    if (button === "praticantes") {
+      navigate("/listar-praticantes");  // Agora a navegação para a página de Listar Praticantes
+    }
   };
 
   const toggleSidebar = () => {
@@ -68,7 +71,7 @@ const Sidebar = () => {
           className={`btn sidebar-button mb-4 fw-bold ${
             activeButton === "praticantes" ? "active-button" : "btn-light"
           }`}
-          onClick={() => handleButtonClick("praticantes")}
+          onClick={() => handleButtonClick("praticantes")}  // Modificado para "praticantes"
         >
           Listar Praticantes <span className="arrow">&gt;</span>
         </button>
