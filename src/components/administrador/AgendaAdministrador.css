@@ -1,0 +1,105 @@
+.agenda-title {
+    color: #9B2D20;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Barra de pesquisa */
+.search-container {
+    max-width: 400px;
+}
+
+.search-input {
+    border: 1px solid #B3B5B6 !important;
+    height: 40px;
+}
+
+.search-icon {
+    background-color: #9B2D20 !important;
+    border: none !important;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegador de data */
+.date-navigator {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-nav {
+    color: #9B2D20 !important;
+    background: none !important;
+    border: none !important;
+    padding: 5px 10px !important;
+}
+
+/* Tabela da agenda */
+.agenda-table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.agenda-table table {
+    margin-bottom: 0;
+}
+
+.agenda-table th {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.session-cell {
+    padding: 10px !important;
+    color: white !important;
+    min-height: 80px;
+}
+
+.empty-cell {
+    background-color: white;
+    min-height: 80px;
+}
+
+.session-time {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.session-praticante {
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.session-equoterapeuta {
+    font-size: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .agenda-title {
+        font-size: 20px;
+    }
+
+    .search-container {
+        margin-bottom: 15px;
+    }
+
+    .agenda-table {
+        overflow-x: auto;
+    }
+
+    .session-time,
+    .session-praticante,
+    .session-equoterapeuta {
+        font-size: 11px;
+    }
+}

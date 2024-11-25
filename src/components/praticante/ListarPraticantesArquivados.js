@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ListarPraticantes.css";
 
 function PraticantesArquivados() {
+  const navigate = useNavigate();
+
   return (
     <div className="listar-praticantes-container container my-5">
       {/* Conteúdo principal */}
@@ -22,8 +25,24 @@ function PraticantesArquivados() {
 
         {/* Aba de status */}
         <div className="tabs mb-3 header d-flex">
-          <button className="btn btn-light me-2">Praticantes Ativos</button>
-          <button className="cor-padrao-btn-praticante btn btn-success">Praticantes Arquivados</button>
+          <button 
+            className="btn btn-light me-2"
+            onClick={() => navigate("/listar-praticantes")}
+          >
+            Praticantes Ativos
+          </button>
+          <button 
+            className="cor-padrao-btn-praticante btn"
+            onClick={() => navigate("/listar-praticantes-arquivados")}
+          >
+            Praticantes Arquivados
+          </button>
+          <button 
+            className="cor-padrao-btn-praticante btn ms-auto"
+            onClick={() => navigate("/cadastro-praticante")}
+          >
+            Cadastre um novo praticante
+          </button>
         </div>
 
         {/* Lista de praticantes arquivados */}

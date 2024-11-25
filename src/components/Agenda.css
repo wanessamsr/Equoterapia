@@ -3,7 +3,7 @@
 }
 
 .agenda{
-    color: #07C158;
+    color: #07C158 !important;
     font-weight: bold;
     font-size: 24px;
 }
@@ -14,6 +14,17 @@
     border-width: 0px;
     color: #FAFAFA !important;
     min-width: 120px;
+}
+
+.search-icon {
+    background-color: #07C158 !important;
+    height: 40px;
+    color: #FFFFFF;
+    align-content: center;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 30px;
+    text-align: center;
 }
 
 .th {

@@ -1,9 +1,11 @@
-// CadastroPraticante2.js
 import React from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './CadastroPraticante2.css';
 
 const CadastroPraticante2 = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container my-5">
       <div className="cadastro-title mb-4">
@@ -17,36 +19,38 @@ const CadastroPraticante2 = () => {
         </div>
 
         <div className="schedule-table mb-4">
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th>Turno/dia</th>
-                <th>Segunda</th>
-                <th>Terça</th>
-                <th>Quarta</th>
-                <th>Quinta</th>
-                <th>Sexta</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Matutino</td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-              </tr>
-              <tr>
-                <td>Vespertino</td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-                <td><Form.Check type="checkbox" /></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th className="bg-light">Turno/dia</th>
+                  <th className="bg-light">Segunda</th>
+                  <th className="bg-light">Terça</th>
+                  <th className="bg-light">Quarta</th>
+                  <th className="bg-light">Quinta</th>
+                  <th className="bg-light">Sexta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="bg-light">Matutino</td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                </tr>
+                <tr>
+                  <td className="bg-light">Vespertino</td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                  <td><Form.Check className="d-flex justify-content-center" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <Row className="mb-4">
@@ -152,12 +156,20 @@ const CadastroPraticante2 = () => {
         </Row>
 
         {/* Botões de ação */}
-        <Row className="mt-4">
-          <Col className="d-flex justify-content-end">
-            <Button variant="secondary" className="me-2 btn-voltar">
+        <Row className="mt-5">
+          <Col className="d-flex justify-content-end gap-3">
+            <Button 
+              variant="secondary" 
+              className="btn-voltar"
+              onClick={() => navigate('/cadastro-praticante')}
+            >
               Voltar
             </Button>
-            <Button variant="primary" className="btn-concluir">
+            <Button 
+              variant="primary" 
+              className="btn-concluir"
+              onClick={() => navigate('/')}
+            >
               Concluir novo cadastro
             </Button>
           </Col>

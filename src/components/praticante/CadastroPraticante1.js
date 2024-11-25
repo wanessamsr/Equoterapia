@@ -1,9 +1,11 @@
-// CadastroPraticante1.js
 import React from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './CadastroPraticante1.css';
 
 const CadastroPraticante1 = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container my-5">
       <div className="cadastro-title mb-4">
@@ -23,15 +25,15 @@ const CadastroPraticante1 = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} md={4} className="d-flex align-items-center justify-content-center">
+          <Col xs={12} md={4} className="d-flex align-items-center justify-content-start">
             <div className="foto-placeholder">
-              <span className="add-photo">+</span>
+              <div className="plus-icon">+</div>
             </div>
           </Col>
         </Row>
 
         {/* Escolaridade */}
-        <div className="section-title mb-3">Escolaridade</div>
+        <div className="section-title">Escolaridade</div>
         <Row className="mb-4">
           <Col xs={12} md={4}>
             <Form.Group>
@@ -87,8 +89,8 @@ const CadastroPraticante1 = () => {
         </Row>
 
         {/* Dados de Identificação */}
-        <div className="section-title mb-3">Dados de Identificação</div>
-        <Row className="mb-4">
+        <div className="section-title">Dados de Identificação</div>
+        <Row className="mb-3">
           <Col xs={12} md={4}>
             <Form.Group>
               <Form.Label>Data de Avaliação</Form.Label>
@@ -119,7 +121,7 @@ const CadastroPraticante1 = () => {
           </Col>
         </Row>
 
-        <Row className="mb-4">
+        <Row className="mb-3">
           <Col xs={12} md={4}>
             <Form.Group>
               <Form.Label>Data de Nascimento</Form.Label>
@@ -152,7 +154,7 @@ const CadastroPraticante1 = () => {
           </Col>
         </Row>
 
-        <Row className="mb-4">
+        <Row className="mb-3">
           <Col xs={12} md={6}>
             <Form.Group>
               <Form.Label>Nome do Pai</Form.Label>
@@ -207,7 +209,7 @@ const CadastroPraticante1 = () => {
         </Row>
 
         {/* Diagnostico Clínico */}
-        <div className="section-title mb-3">Diagnóstico Clínico</div>
+        <div className="section-title">Diagnóstico Clínico</div>
         <Row className="mb-4">
           <Col xs={12}>
             <Form.Group>
@@ -223,11 +225,13 @@ const CadastroPraticante1 = () => {
         </Row>
 
         {/* Responsáveis pelo Praticante */}
-        <div className="section-title mb-3">Responsáveis pelo Praticante</div>
-        <div className="responsavel-section mb-4">
-          <div className="sub-title mb-3">Responsável 1</div>
+        <div className="section-title">Responsáveis pelo Praticante</div>
+        
+        {/* Responsável 1 */}
+        <div className="responsavel-wrapper mb-4">
+          <div className="text-muted mb-3">Responsável 1</div>
           <Row className="mb-3">
-            <Col xs={12} md={6}>
+            <Col xs={12} md={4}>
               <Form.Group>
                 <Form.Label>Grau de parentesco</Form.Label>
                 <Form.Select className="input-field">
@@ -235,7 +239,7 @@ const CadastroPraticante1 = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={4}>
               <Form.Group>
                 <Form.Label>Profissão</Form.Label>
                 <Form.Control 
@@ -245,9 +249,19 @@ const CadastroPraticante1 = () => {
                 />
               </Form.Group>
             </Col>
+            <Col xs={12} md={4}>
+              <Form.Group>
+                <Form.Label>Telefone 1</Form.Label>
+                <Form.Control 
+                  type="text" 
+                  placeholder="(00) 0 0000-0000"
+                  className="input-field"
+                />
+              </Form.Group>
+            </Col>
           </Row>
 
-          <Row className="mb-4">
+          <Row className="mb-3">
             <Col xs={12} md={4}>
               <Form.Group>
                 <Form.Label>Data de Nascimento</Form.Label>
@@ -281,10 +295,11 @@ const CadastroPraticante1 = () => {
           </Row>
         </div>
 
-        <div className="responsavel-section mb-4">
-          <div className="sub-title mb-3">Responsável 2</div>
+        {/* Responsável 2 */}
+        <div className="responsavel-wrapper mb-4">
+          <div className="text-muted mb-3">Responsável 2</div>
           <Row className="mb-3">
-            <Col xs={12} md={6}>
+            <Col xs={12} md={4}>
               <Form.Group>
                 <Form.Label>Grau de parentesco</Form.Label>
                 <Form.Select className="input-field">
@@ -292,7 +307,7 @@ const CadastroPraticante1 = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={4}>
               <Form.Group>
                 <Form.Label>Profissão</Form.Label>
                 <Form.Control 
@@ -302,9 +317,19 @@ const CadastroPraticante1 = () => {
                 />
               </Form.Group>
             </Col>
+            <Col xs={12} md={4}>
+              <Form.Group>
+                <Form.Label>Telefone 1</Form.Label>
+                <Form.Control 
+                  type="text" 
+                  placeholder="(00) 0 0000-0000"
+                  className="input-field"
+                />
+              </Form.Group>
+            </Col>
           </Row>
 
-          <Row className="mb-4">
+          <Row className="mb-3">
             <Col xs={12} md={4}>
               <Form.Group>
                 <Form.Label>Data de Nascimento</Form.Label>
@@ -366,11 +391,19 @@ const CadastroPraticante1 = () => {
         </Row>
 
         <Row className="mt-4">
-          <Col className="d-flex justify-content-end">
-            <Button variant="secondary" className="me-2 btn-cancelar">
+          <Col className="d-flex justify-content-end gap-3">
+            <Button 
+              variant="secondary" 
+              className="btn-cancelar"
+              onClick={() => navigate('/')}
+            >
               Cancelar
             </Button>
-            <Button variant="primary" className="btn-avancar">
+            <Button 
+              variant="success" 
+              className="btn-avancar"
+              onClick={() => navigate('/cadastro-praticante/2')}
+            >
               Avançar
             </Button>
           </Col>

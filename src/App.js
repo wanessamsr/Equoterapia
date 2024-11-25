@@ -16,6 +16,16 @@ import CadastroPraticante2 from "./components/praticante/CadastroPraticante2";
 import ProximasSessoes from "./components/praticante/ProximasSessoes";
 import CadastrarEquino from "./components/equitador/CadastrarEquino.js";
 import DadosEquino from "./components/equitador/DadosEquino.js";
+import CadastroProfissional1 from "./components/administrador/CadastroProfissional1";
+import CadastroEquitador from "./components/administrador/CadastroEquitador";
+import ListarPraticantesAtivos from "./components/praticante/ListarPraticantesAtivos";
+import ListarPraticantesArquivados from "./components/praticante/ListarPraticantesArquivados";
+import AgendaEquitador from "./components/equitador/AgendaEquitador.js";
+import SidebarAdministrador from "./components/administrador/SidebarAdministrador";
+import AgendaAdministrador from "./components/administrador/AgendaAdministrador";
+import ListarFuncionariosAtivos from "./components/administrador/ListarFuncionariosAtivos";
+import ListarFuncionariosArquivados from "./components/administrador/ListarFuncionariosArquivados";
+import CadastroProfissionalForm from "./components/administrador/CadastroProfissionalForm";
 
 function App() {
   return (
@@ -62,6 +72,17 @@ function App() {
             }
           />
           <Route
+            path="/equitador/agenda"
+            element={
+              <div className="app-content">
+                <SidebarEquitador />
+                <div className="content">
+                  <AgendaEquitador />
+                </div>
+              </div>
+            }
+          />
+          <Route
             path="/equitador/listar-equino"
             element={
               <div className="row">
@@ -74,8 +95,7 @@ function App() {
               </div>
             }
           />
-
-<Route
+          <Route
             path="/cadastrar-equino"
             element={
               <div className="app-content">
@@ -86,7 +106,6 @@ function App() {
               </div>
             }
           />
-
           <Route
             path="/dados-equino"
             element={
@@ -98,7 +117,6 @@ function App() {
               </div>
             }
           />
-          
           <Route
             path="/cadastro-praticante"
             element={
@@ -128,6 +146,105 @@ function App() {
                 <Sidebar />
                 <div className="content">
                   <ProximasSessoes />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/cadastro-profissional1"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <CadastroProfissional1 />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/cadastro-equitador"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <CadastroEquitador />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/listar-praticantes"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <ListarPraticantesAtivos />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/listar-praticantes-arquivados"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <ListarPraticantesArquivados />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/administrador"
+            element={
+              <div className="app-content">
+                <SidebarAdministrador />
+                <div className="content">
+                  <AgendaAdministrador />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/agenda"
+            element={
+              <div className="app-content">
+                <SidebarAdministrador />
+                <div className="content">
+                  <AgendaAdministrador />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/listar-funcionarios-ativos"
+            element={
+              <div className="app-content">
+                <SidebarAdministrador />
+                <div className="content">
+                  <ListarFuncionariosAtivos />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/listar-funcionarios-arquivados"
+            element={
+              <div className="app-content">
+                <SidebarAdministrador />
+                <div className="content">
+                  <ListarFuncionariosArquivados />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/cadastro-profissional"
+            element={
+              <div className="app-content">
+                <SidebarAdministrador />
+                <div className="content">
+                  <CadastroProfissionalForm />
                 </div>
               </div>
             }

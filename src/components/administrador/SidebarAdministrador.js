@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { RxExit } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import "../Sidebar.css";
-import "./SidebarEquitador.css";
+import "./SidebarAdministrador.css";
 
-const SidebarEquitador = () => {
+const SidebarAdministrador = () => {
   const [activeButton, setActiveButton] = useState(null);
   const navigate = useNavigate();
 
@@ -12,10 +12,10 @@ const SidebarEquitador = () => {
     setActiveButton(button);
     switch(button) {
       case "agenda":
-        navigate("/equitador/agenda"); // Nova rota para agenda do equitador
+        navigate("/administrador/agenda");
         break;
-      case "listarEquino":
-        navigate("/equitador/listar-equino");
+      case "profissionais":
+        navigate("/listar-funcionarios-ativos"); // Vai para a lista de funcionários ativos por padrão
         break;
       default:
         break;
@@ -37,28 +37,28 @@ const SidebarEquitador = () => {
         />
       </div>
 
-      <h5 className="text-center mb-2 fw-bold">Bem Vindo!</h5>
-      <h6 className="username-equitador mb-5 fw-bold">Nome do Usuário</h6>
+      <h5 className="text-center mb-2 fw-bold">Bem vindo !</h5>
+      <h6 className="username-administrador mb-5 fw-bold">ADMINISTRADOR</h6>
 
       <button
         className={`btn sidebar-button mb-4 fw-bold ${
-          activeButton === "agenda" ? "active-button-equitador" : "btn-light"
+          activeButton === "agenda" ? "active-button-administrador" : "btn-light"
         }`}
         onClick={() => handleButtonClick("agenda")}
       >
-        Acessar Agenda <span className="arrow">&gt;</span>
+        Acessar agenda <span className="arrow">&gt;</span>
       </button>
 
       <button
         className={`btn sidebar-button mb-4 fw-bold ${
-          activeButton === "listarEquino" ? "active-button-equitador" : "btn-light"
+          activeButton === "profissionais" ? "active-button-administrador" : "btn-light"
         }`}
-        onClick={() => handleButtonClick("listarEquino")}
+        onClick={() => handleButtonClick("profissionais")}
       >
-        Listar Equinos <span className="arrow">&gt;</span>
+        Listar Profissionais <span className="arrow">&gt;</span>
       </button>
     </div>
   );
 };
 
-export default SidebarEquitador;
+export default SidebarAdministrador;

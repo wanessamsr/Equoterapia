@@ -15,7 +15,7 @@
 }
 
 .search-icon {
-    background-color: #07C158;
+    background-color: #07C158 !important;
     height: 40px;
     color: #FFFFFF;
     align-content: center;

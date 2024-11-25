@@ -1,0 +1,102 @@
+.cadastro-title {
+    color: #9B2D20 !important;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.section-title {
+    color: #9B2D20 !important;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cadastro-form {
+    color: #193238;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    border: 2px solid #9B2D20 !important;
+}
+
+.input-field {
+    border: 1px solid #B3B5B6;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: white;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.foto-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #f8f9fa;
+    border: 2px dashed #B3B5B6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-photo {
+    font-size: 30px;
+    color: #B3B5B6;
+}
+
+.btn-cancelar {
+    background-color: #032437;
+    border: none;
+    color: #FAFAFA;
+    padding: 8px 24px;
+    border-radius: 5px;
+    min-width: 120px;
+}
+
+.btn-concluir {
+    background-color: #9B2D20 !important;
+    border: none;
+    color: #FAFAFA;
+    padding: 8px 24px;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+.radio-group {
+    width: 100%;
+}
+
+.custom-radio .form-check-input:checked {
+    background-color: #9B2D20 !important;
+    border-color: #9B2D20 !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-title {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .foto-placeholder {
+        margin: 20px 0;
+    }
+
+    .btn-cancelar,
+    .btn-concluir {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

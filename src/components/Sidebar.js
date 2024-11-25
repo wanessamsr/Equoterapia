@@ -1,36 +1,41 @@
 import React, { useState } from "react";
 import { RxExit } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";  // Importar useNavigate
-import { FaBars } from "react-icons/fa"; // Ícone para abrir a sidebar
+import { Link, useNavigate } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import "./Sidebar.css";
 
 const Sidebar = () => {
   const [activeButton, setActiveButton] = useState(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Estado para controlar a abertura da sidebar
-  const navigate = useNavigate();  // Hook para navegação programática
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleButtonClick = (button) => {
     setActiveButton(button);
-    if (button === "agenda") {
-      navigate("/");
-    }
-    if (button === "sessoes") {
-      navigate("/proximas-sessoes"); 
+    switch (button) {
+      case "agenda":
+        navigate("/");
+        break;
+      case "sessoes":
+        navigate("/proximas-sessoes");
+        break;
+      case "praticantes":
+        navigate("/listar-praticantes");
+        break;
+      default:
+        break;
     }
   };
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen); // Alterna a sidebar entre aberta e fechada
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <>
-      {/* Botão para abrir a sidebar em telas pequenas */}
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         <FaBars />
       </button>
 
-      {/* Sidebar */}
       <div className={`sidebar p-3 ${isSidebarOpen ? "open" : ""}`}>
         <Link to="/login" className="btn exit-button d-flex align-items-center">
           <RxExit className="exit-icon me-1 icon-large" />
@@ -52,10 +57,11 @@ const Sidebar = () => {
           className={`btn sidebar-button mb-4 fw-bold ${
             activeButton === "agenda" ? "active-button" : "btn-light"
           }`}
-          onClick={() => handleButtonClick("agenda")}  // Atualiza para navegar
+          onClick={() => handleButtonClick("agenda")}
         >
           Acessar Agenda <span className="arrow">&gt;</span>
         </button>
+
         <button
           className={`btn sidebar-button mb-4 fw-bold ${
             activeButton === "sessoes" ? "active-button" : "btn-light"
@@ -64,6 +70,7 @@ const Sidebar = () => {
         >
           Próximas Sessões <span className="arrow">&gt;</span>
         </button>
+
         <button
           className={`btn sidebar-button mb-4 fw-bold ${
             activeButton === "praticantes" ? "active-button" : "btn-light"

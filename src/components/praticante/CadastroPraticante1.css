@@ -1,21 +1,14 @@
-/* CadastroPraticante1.css */
 .cadastro-title {
-    color: #07C158;
+    color: #00A335 !important;
     font-weight: bold;
     font-size: 24px;
 }
 
 .section-title {
-    color: #07C158;
+    color: #00A335 !important;
     font-weight: bold;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.sub-title {
-    color: #193238;
-    font-weight: 600;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .cadastro-form {
@@ -26,53 +19,88 @@
     border: 1px solid #B3B5B6;
     border-radius: 5px;
     padding: 8px 12px;
+    background-color: white;
+    height: 40px;
+}
+
+.input-field::placeholder {
+    color: #B3B5B6;
+    font-size: 14px;
 }
 
 .form-label {
     font-weight: 500;
     margin-bottom: 8px;
+    font-size: 14px;
+    color: #000000;
 }
 
 .foto-placeholder {
-    width: 120px;
-    height: 120px;
-    background-color: #f8f9fa;
+    width: 80px;
+    height: 80px;
+    background-color: #FAFAFA;
     border: 2px dashed #B3B5B6;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
-.add-photo {
-    font-size: 40px;
-    color: #B3B5B6;
+.plus-icon {
+    font-size: 24px;
+    color: #00A335 !important;
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00A335 !important;
+}
+
+.responsavel-wrapper {
+    background-color: #FAFAFA;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .btn-cancelar {
-    background-color: #032437 !important;
+    background-color: #032437;
     border: none;
-    color: #FAFAFA !important;
-    padding: 8px 24px;
+    color: #FAFAFA;
+    padding: 8px 32px;
     border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
     min-width: 120px;
 }
 
 .btn-avancar {
-    background-color: #07C158 !important;
+    background-color: #00A335 !important;
     border: none;
-    color: #FAFAFA !important;
-    padding: 8px 24px;
+    color: #FAFAFA;
+    padding: 8px 32px;
     border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
     min-width: 120px;
 }
 
-.responsavel-section {
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    margin-bottom: 20px;
+textarea.input-field {
+    height: auto;
+    min-height: 100px;
+}
+
+.form-select {
+    height: 40px;
+    background-color: #FAFAFA;
 }
 
 /* Responsividade */
@@ -82,12 +110,12 @@
     }
 
     .section-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .foto-placeholder {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
         margin: 20px 0;
     }
 
@@ -97,7 +125,15 @@
         margin-bottom: 10px;
     }
 
-    .responsavel-section {
+    .responsavel-wrapper {
         padding: 15px;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .input-field::placeholder {
+        font-size: 12px;
     }
 }

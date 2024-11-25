@@ -1,15 +1,14 @@
-/* CadastroPraticante2.css */
 .cadastro-title {
-    color: #07C158;
+    color: #00A335 !important;
     font-weight: bold;
     font-size: 24px;
 }
 
 .section-title {
-    color: #07C158;
+    color: #00A335 !important;
     font-weight: bold;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .cadastro-form {
@@ -20,32 +19,34 @@
     border: 1px solid #B3B5B6;
     border-radius: 5px;
     padding: 8px 12px;
+    background-color: white;
+    height: 40px;
+}
+
+.input-field::placeholder {
+    color: #B3B5B6;
+    font-size: 14px;
 }
 
 .form-label {
     font-weight: 500;
     margin-bottom: 8px;
+    font-size: 14px;
+    color: #000000;
 }
 
-/* Estilização da tabela de cronograma */
+/* Tabela de cronograma */
 .schedule-table {
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .schedule-table table {
     margin-bottom: 0;
 }
 
-.schedule-table th {
-    background-color: #f8f9fa;
-    color: #193238;
-    font-weight: 600;
-    text-align: center;
-    padding: 12px;
-    border: 1px solid #dee2e6;
-}
-
+.schedule-table th,
 .schedule-table td {
     text-align: center;
     vertical-align: middle;
@@ -53,36 +54,51 @@
     border: 1px solid #dee2e6;
 }
 
-/* Customização dos checkboxes */
+.schedule-table .bg-light {
+    background-color: #FAFAFA;
+}
+
+/* Checkboxes customizados */
 .form-check-input {
     width: 20px;
     height: 20px;
     margin: 0;
     cursor: pointer;
+    border: 2px solid #00A335 !important;
 }
 
 .form-check-input:checked {
-    background-color: #07C158;
-    border-color: #07C158;
+    background-color: #00A335 !important;
+    border-color: #00A335 !important;
 }
 
 /* Botões */
 .btn-voltar {
-    background-color: #032437 !important;
+    background-color: #032437;
     border: none;
-    color: #FAFAFA !important;
-    padding: 8px 24px;
+    color: #FAFAFA;
+    padding: 8px 32px;
     border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
     min-width: 120px;
 }
 
 .btn-concluir {
-    background-color: #07C158 !important;
+    background-color: #00A335 !important;
     border: none;
-    color: #FAFAFA !important;
-    padding: 8px 24px;
+    color: #FAFAFA;
+    padding: 8px 32px;
     border-radius: 5px;
-    min-width: 200px;
+    font-size: 14px;
+    height: 40px;
+    min-width: 220px;
+}
+
+textarea.input-field {
+    height: auto;
+    min-height: 100px;
+    resize: none;
 }
 
 /* Responsividade */
@@ -92,7 +108,7 @@
     }
 
     .section-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .schedule-table {
@@ -110,12 +126,10 @@
     }
 
     .form-label {
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    .schedule-table th,
-    .schedule-table td {
-        padding: 8px;
-        font-size: 14px;
+    .input-field::placeholder {
+        font-size: 12px;
     }
 }
