@@ -1,0 +1,85 @@
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2, h3 {
+    color: #343a40;
+  }
+  
+  .info-title {
+    color: #28a745;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .small {
+    font-size: 0.8rem;
+    line-height: 1.3; 
+  }
+  
+  button {
+    font-size: 0.75rem; 
+    padding: 0.3rem 0.5rem;
+    border-radius: 15px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  select.form-select {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    max-width: 200px;
+  }
+  
+  button.btn-success {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 12px;
+  }
+  
+  .perfil img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 5px; 
+  }
+  
+  .d-flex {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .d-flex > div {
+    margin-right: 10px; 
+  }
+  
+  .ml-auto {
+    margin-left: auto; 
+  }
+  
+  .mt-3 {
+    margin-top: 0.5rem; 
+  }
+  
+  .name-age h2 {
+    margin-bottom: 5px;
+  }
+  
+  .text-muted {
+    font-size: 0.8rem;
+    margin-left: 5px; 
+    margin-top: 0; 
+  }
+  

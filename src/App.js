@@ -26,6 +26,10 @@ import AgendaAdministrador from "./components/administrador/AgendaAdministrador"
 import ListarFuncionariosAtivos from "./components/administrador/ListarFuncionariosAtivos";
 import ListarFuncionariosArquivados from "./components/administrador/ListarFuncionariosArquivados";
 import CadastroProfissionalForm from "./components/administrador/CadastroProfissionalForm";
+import ListarPraticantes from './pages/ListarPraticantes';
+import DadosPessoais from './pages/DadosPessoais';
+import ExibirAnamnese from './pages/ExibirAnamnese';
+import ExibirEvolucoes from './pages/ExibirEvolucoes';
 
 function App() {
   return (
@@ -245,6 +249,50 @@ function App() {
                 <SidebarAdministrador />
                 <div className="content">
                   <CadastroProfissionalForm />
+                </div>
+              </div>
+            }
+          />
+          <Route 
+            path="/listar-praticantes" 
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <ListarPraticantes />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/exibir-evolucoes"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <ExibirEvolucoes />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/exibir-anamnese"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <ExibirAnamnese />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/dados-pessoais"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <DadosPessoais />
                 </div>
               </div>
             }
